@@ -17,12 +17,13 @@ public class BubbleSort
         while(swapcount != 0)
         {
             swapcount = 0;
-            for(i=0; i < arr.length; i++)
+            for(i=0; i < arr.length-1; i++)
             {
                 j = i + 1;
                 if(arr[i] > arr[j])
                 {
                     swap(arr, arr[i], arr[j]);
+                    swapcount++;
                 }
             }
         }
