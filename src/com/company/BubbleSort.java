@@ -9,9 +9,9 @@ public class BubbleSort
         arr[i] = h;
     }
 
-    public static void sort(int[] arr, int swapcount, int i, int j)
+    public static void sort(int[] arr, int i, int j)
     {
-        swapcount = 1;
+        int swapcount = 1;
         //It should be 0 but I set it to one here so that I can move
         //into the while loop
         while(swapcount != 0)
@@ -20,7 +20,10 @@ public class BubbleSort
             for(i=0; i < arr.length; i++)
             {
                 j = i + 1;
-                if()
+                if(arr[i] > arr[j])
+                {
+                    swap(arr, arr[i], arr[j]);
+                }
             }
         }
     }

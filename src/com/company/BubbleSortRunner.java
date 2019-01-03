@@ -14,7 +14,7 @@ public class BubbleSortRunner {
         System.out.println();
 
         //Sort it using bubbleSort
-        BubbleSort.bubbleSort(testArr);
+        BubbleSort.sort(testArr, 0, 1);
 
         //Print it out after you sort
         System.out.print("After: ");
