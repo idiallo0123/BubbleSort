@@ -1,15 +1,8 @@
 package com.company;
 
-public class BubbleSort
+public class Sorts
 {
-    public static void swap(int[] arr, int i, int j)
-    {
-        int h = arr[j];
-        arr[j] = arr[i];
-        arr[i] = h;
-    }
-
-    public static void sort(int[] arr, int i, int j)
+    public static void bubbleSort(int[] arr, int i, int j)
     {
         int swapcount = 1;
         //It should be 0 but I set it to one here so that I can move
@@ -22,10 +15,18 @@ public class BubbleSort
                 j = i + 1;
                 if(arr[i] > arr[j])
                 {
-                    swap(arr, arr[i], arr[j]);
+                    SortUtil.swap(arr, arr[i], arr[j]);
                     swapcount++;
                 }
             }
         }
+    }
+
+    /*Select the smallest value in the array and put it first.
+    Select the 2nd smallest value in the array and put it second.
+    Etcetera... */
+    public static void selectionSort()
+    {
+
     }
 }
