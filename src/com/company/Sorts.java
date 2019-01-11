@@ -30,7 +30,14 @@ public class Sorts
     and repeats.*/
     public static void selectionSort(int[] list2)
     {
-
+        boolean sorted = SortUtil.isSorted(list2);
+        while(sorted = false)
+        {
+            for(int ind = 0; ind < list2.length; ind++);
+            {
+                int min = SortUtil.minimum(list2, ind);
+            }
+        }
     }
 
     /*Insertion takes each element from the array, and adds it to the front of

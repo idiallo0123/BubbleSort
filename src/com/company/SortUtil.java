@@ -2,12 +2,14 @@ package com.company;
 
 public class SortUtil
 {
-    public static void swap(int[] arr, int i, int j)
+    public static void intSwap(int[] arr, int i, int j)
     {
         int h = arr[j];
         arr[j] = arr[i];
         arr[i] = h;
     }
+
+    public static void stringSwap()
 
     public static boolean isSorted(int[] arr)
     {
@@ -66,6 +68,15 @@ public class SortUtil
             }
             num--;
             arr[num] = s;
+        }
+        return arr;
+    }
+    public static int[] randomIntArr(int length)
+    {
+        int[] arr = null;
+        for(int i = 0; i < length; i++)
+        {
+            arr[i] = (int)(Math.random()*11);
         }
         return arr;
     }
