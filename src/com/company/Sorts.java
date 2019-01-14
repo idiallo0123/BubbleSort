@@ -7,19 +7,17 @@ public class Sorts
     public static void bubbleSort(String[] list1)
     {
         int i, j;
-        int swapcount = 1;
-        //Swapcount should be 0 but I set it to one here so that I can move
-        //into the while loop
-        while(swapcount != 0)
+        boolean swap = true;
+        while(swap)
         {
-            swapcount = 0;
+            swap = false;
             for(i=0; i < list1.length-1; i++)
             {
                 j = i + 1;
-                if(list1[i] > list1[j])
+                if(list1[i].compareTo(list1[j]) > 0)
                 {
-                    SortUtil.swap(list1, list1[i], list1[j]);
-                    swapcount++;
+                    SortUtil.stringSwap(list1, list1[i], list1[j]);
+                    swap = true;
                 }
             }
         }
@@ -30,21 +28,27 @@ public class Sorts
     and repeats.*/
     public static void selectionSort(int[] list2)
     {
-        boolean sorted = SortUtil.isSorted(list2);
+        int index = 0;
+        boolean sorted = false;
         while(sorted = false)
         {
-            for(int ind = 0; ind < list2.length; ind++);
+            for(index = 0; index < list2.length; index++);
             {
-                int min = SortUtil.minimum(list2, ind);
+                int min = SortUtil.minimum(list2, index);
+                if(min > list2[index])
+                {
+                    SortUtil.intSwap(list2, index, (index+1));
+                }
             }
+            sorted = SortUtil.isSorted(list2);
         }
     }
 
     /*Insertion takes each element from the array, and adds it to the front of
     the array in the correct order. We need to keep track of where we are inserting
     inserting elements as we sort. */
-    public static void insertionSort(double[] list3)
+    /*public static void insertionSort(double[] list3)
     {
 
-    }
+    }*/
 }

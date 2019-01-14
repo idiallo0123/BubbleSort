@@ -4,12 +4,17 @@ public class SortUtil
 {
     public static void intSwap(int[] arr, int i, int j)
     {
-        int h = arr[j];
+        int hold = arr[j];
         arr[j] = arr[i];
-        arr[i] = h;
+        arr[i] = hold;
     }
 
-    public static void stringSwap()
+    public static void stringSwap(String[] arr, String i, String j)
+    {
+        String hold = arr[j];
+        arr[j] = arr[i];
+        arr[i] = hold;
+    }
 
     public static boolean isSorted(int[] arr)
     {
@@ -25,7 +30,7 @@ public class SortUtil
         return true;
     }
 
-    public static boolean checkSum(int[] before, int[] after)
+    /*public static boolean checkSum(int[] before, int[] after)
     {
         int sumBefore, sumAfter;
         for(int i = 0; i <= before.length; i++)
@@ -41,7 +46,7 @@ public class SortUtil
             return true;
         }
         return false;
-    }
+    }*/
 
     public static int minimum(int[] arr, int index)
     {

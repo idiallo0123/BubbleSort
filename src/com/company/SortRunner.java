@@ -11,7 +11,7 @@ public class SortRunner {
 
         //Print it out before you sort.
         System.out.print("Before: ");
-        for (int num:list2)
+        for (int num:list1)
             System.out.print(num+" ");
         System.out.println();
 
@@ -30,12 +30,27 @@ public class SortRunner {
             System.out.print(num+" ");
         System.out.println();
 
-        //Sort it using bubbleSort
+        //Sort it using selectionSort
         Sorts.selectionSort(list2);
 
         //Print it out after you sort
         System.out.print("After: ");
         for (int num:list2)
+            System.out.print(num+" ");
+        System.out.println();
+
+        //Print it out before you sort.
+        System.out.print("Before: ");
+        for (int num:list3)
+            System.out.print(num+" ");
+        System.out.println();
+
+        //Sort it using insertionSort
+        Sorts.selectionSort(list3);
+
+        //Print it out after you sort
+        System.out.print("After: ");
+        for (int num:list3)
             System.out.print(num+" ");
         System.out.println();
     }
