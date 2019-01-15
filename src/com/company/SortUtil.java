@@ -9,7 +9,7 @@ public class SortUtil
         arr[i] = hold;
     }
 
-    public static void stringSwap(String[] arr, String i, String j)
+    public static void stringSwap(String[] arr, int i, int j)
     {
         String hold = arr[j];
         arr[j] = arr[i];
@@ -29,7 +29,7 @@ public class SortUtil
         }
         return true;
     }
-
+    //Change to a getSum type thing and then just check in the runner
     /*public static boolean checkSum(int[] before, int[] after)
     {
         int sumBefore, sumAfter;
@@ -53,12 +53,15 @@ public class SortUtil
         int min = arr[index];
         for(int i = index; i < arr.length; i++)
         {
-            if (arr[i] < arr[index])   min = arr[i];
+            if (min < arr[i])
+            {
+                min = arr[i];
+            }
         }
         return min;
     }
 
-    public String[] randomStringArr(int num, int length)
+    public static String[] randomStringArr(int num, int length)
     {
         String [] arr = new String [num];
         while(num > 0)
@@ -76,9 +79,10 @@ public class SortUtil
         }
         return arr;
     }
+
     public static int[] randomIntArr(int length)
     {
-        int[] arr = null;
+        int[] arr = new int[length];
         for(int i = 0; i < length; i++)
         {
             arr[i] = (int)(Math.random()*11);

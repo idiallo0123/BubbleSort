@@ -11,8 +11,8 @@ public class SortRunner {
 
         //Print it out before you sort.
         System.out.print("Before: ");
-        for (int num:list1)
-            System.out.print(num+" ");
+        for (String str:list1)
+            System.out.print(str+" ");
         System.out.println();
 
         //Sort it using bubbleSort
@@ -20,8 +20,8 @@ public class SortRunner {
 
         //Print it out after you sort
         System.out.print("After: ");
-        for (int num:list2)
-            System.out.print(num+" ");
+        for (String str:list1)
+            System.out.print(str+" ");
         System.out.println();
 
         //Print it out before you sort.

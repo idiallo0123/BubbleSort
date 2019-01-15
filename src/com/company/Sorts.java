@@ -16,7 +16,7 @@ public class Sorts
                 j = i + 1;
                 if(list1[i].compareTo(list1[j]) > 0)
                 {
-                    SortUtil.stringSwap(list1, list1[i], list1[j]);
+                    SortUtil.stringSwap(list1, i, j);
                     swap = true;
                 }
             }
@@ -28,19 +28,26 @@ public class Sorts
     and repeats.*/
     public static void selectionSort(int[] list2)
     {
-        int index = 0;
+        int index = 0, min = 0, i;
         boolean sorted = false;
         while(sorted = false)
         {
             for(index = 0; index < list2.length; index++);
             {
-                int min = SortUtil.minimum(list2, index);
+                //This will get the minimum value
+                //int min = SortUtil.minimum(list2, index)
+                for(i = index; i < list2.length; i++);
+                    {
+                        if(list2[i] < list2[(i+1)])     min=list2[i];
+                    }
+                //This will swap the minimum with the current number
                 if(min > list2[index])
                 {
                     SortUtil.intSwap(list2, index, (index+1));
                 }
+                //Should we jump out of the for loop?
+                sorted = SortUtil.isSorted(list2);
             }
-            sorted = SortUtil.isSorted(list2);
         }
     }
 
