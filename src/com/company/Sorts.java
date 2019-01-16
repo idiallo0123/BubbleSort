@@ -23,30 +23,28 @@ public class Sorts
         }
     }
 
-    /*Selection sort finds the lowest element and mose it to the front
+    /*Selection sort finds the lowest element and moves it to the front
     of the array. Then searches the rest of the array for the next element,
     and repeats.*/
     public static void selectionSort(int[] list2)
     {
-        int index = 0, min = 0, i;
-        boolean sorted = false;
-        while(sorted = false)
+        int min = list2[0], Bindex, Findex, hold;
+        for(Bindex = 0; Bindex < list2.length; Bindex++)
         {
-            for(index = 0; index < list2.length; index++);
+            for(Findex = Bindex; Findex < list2.length-1; Findex++);
             {
-                //This will get the minimum value
-                //int min = SortUtil.minimum(list2, index)
-                for(i = index; i < list2.length; i++);
-                    {
-                        if(list2[i] < list2[(i+1)])     min=list2[i];
-                    }
-                //This will swap the minimum with the current number
-                if(min > list2[index])
+                if (min > list2[Findex])
                 {
-                    SortUtil.intSwap(list2, index, (index+1));
+                    min = list2[Findex];
                 }
-                //Should we jump out of the for loop?
-                sorted = SortUtil.isSorted(list2);
+                hold = list2[Bindex];
+                SortUtil.intSwap(list2, list2[Bindex], min);
+                list2[Bindex+1] = hold;
+                for(int i = Bindex+1; i < list2.length-1; i++)
+                {
+                    list2[i] = list2[(i+1)];
+                }
+                min = list2[Bindex];
             }
         }
     }
